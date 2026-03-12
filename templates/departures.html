@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<div class="container">
+
+<h1>{{ stop }}</h1>
+
+{% for bus in departures %}
+
+<div class="departure-card">
+    <div>
+        <div class="line">{{ bus.line }}</div>
+        <div class="destination">{{ bus.destination }}</div>
+    </div>
+
+    <div class="time">
+        {{ bus.time }}
+    </div>
+</div>
+
+{% endfor %}
+
+<a class="back" href="/">← Nytt søk</a>
+
+</div>  

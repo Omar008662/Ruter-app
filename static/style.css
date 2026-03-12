@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+/* Container */
+.container {
+    width: 420px;
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #e60023;
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #e60023;
+}
+
+/* Button */
+button {
+    background: #e60023;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #c4001d;
+}
+
+/* Departure list */
+.departure-card {
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #e60023;
+}
+
+/* Line number */
+.line {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Destination */
+.destination {
+    font-size: 15px;
+    color: #555;
+}
+
+/* Time */
+.time {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Back link */
+.back {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #e60023;
+    font-weight: 600;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
