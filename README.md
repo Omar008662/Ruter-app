@@ -1,16 +1,20 @@
-Brukerveiledning
+# Brukerveiledning
 
-Dette prosjektet er en ruter nettside som jeg har laget helt selv. I denne ruter nettsiden kan du se et kart over området du er i. Du kan også se live kollektivtransport tider.
+Dette prosjektet er en Ruter-nettside som jeg har laget helt selv. På nettsiden kan du både se et kart over området du befinner deg i, og få live-tider for kollektivtransport.
 
+## Slik bruker du nettsiden
+Trykk på søkefeltet på startsiden.
+Skriv inn navnet på holdeplassen du ønsker å reise fra.
+Trykk på Søk-knappen.
 
-Trykk på søkefeltet og skriv navnet på stoppet som du skal ta transporten fra.
+Du blir deretter sendt til en side som viser all kollektivtransport fra den valgte holdeplassen, samt når buss, trikk, tog eller bane kommer i sanntid.
 
-Deretter trykker du på søk knappen.
+## Kartfunksjon
 
-Så tar den deg til siden med all transporten fra det holdeplasse og viser når kollektivtransporten kommer.
+Øverst til høyre finner du en knapp som heter Kart.
 
-Du kan også trykke øverst til høyre, der hvor det står kart.
+Når du trykker på den, blir du sendt til en side med kart over området rundt deg.
 
-Den tar deg til en side med kart over området.
+## Tilbake til hjemmesiden
 
-Vis du vil tilbake til hjemmesiden så kan du alltid trykke på Ruter+ logoen.
+Hvis du ønsker å gå tilbake til startsiden, kan du når som helst trykke på Ruter+ logoen.
