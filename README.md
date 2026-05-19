@@ -1,5 +1,8 @@
 Brukerveiledning
 
+Dette prosjektet er en ruter nettside som jeg har laget helt selv. I denne ruter nettsiden kan du se et kart over området du er i. Du kan også se live kollektivtransport tider.
+
+
 Trykk på søkefeltet og skriv navnet på stoppet som du skal ta transporten fra.
 
 Deretter trykker du på søk knappen.
