@@ -7,6 +7,7 @@
 
 /* Body */
 body {
+
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
     background: #f4f6f8;
     color: #222;
@@ -111,4 +112,53 @@ button:hover {
 
 .back:hover {
     text-decoration: underline;
+}
+
+/* Navbar */
+
+.navbar{
+    width:100%;
+    background:#e60023;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px #cc2c2c1a;
+}
+
+a {
+    text-decoration: none;
+    border: none
 }

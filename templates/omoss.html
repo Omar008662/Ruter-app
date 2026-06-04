@@ -2,13 +2,11 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kollektiv App</title>
+    <title>Om oss</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<!-- Navbar -->
 <div class="navbar">
     <div class="nav-container">
         <div class="logo">Ruter#</div>
@@ -23,39 +21,39 @@
     </div>
 </div>
 
-<!-- Main container -->
 <div class="container">
 
-    <h1>Velkommen</h1>
+    <h1>Om oss</h1>
 
-    <p style="text-align:center; color:#666; margin-bottom:20px;">
-        Finn avganger og planlegg reisen raskt
+    <p style="margin-top:15px; color:#555; line-height:1.6;">
+        Dette er en kollektivtransport-app som lar deg søke etter avganger,
+        se kart og lagre favorittstopp.
     </p>
 
+    <br>
+
     <div class="departure-card">
         <div>
-            <div class="line">🔎 Søk avganger</div>
-            <div class="destination">Finn buss, trikk og T-bane</div>
+            <div class="line">🚍 Målet vårt</div>
+            <div class="destination">Gjør reise enklere og raskere</div>
         </div>
-        <a href="/søk" class="time">→</a>
     </div>
 
     <div class="departure-card">
         <div>
-            <div class="line">🗺️ Åpne kart</div>
-            <div class="destination">Se holdeplasser i nærheten</div>
+            <div class="line">⚡ Teknologi</div>
+            <div class="destination">Flask, MariaDB og Ruter API</div>
         </div>
-        <a href="/kart" class="time">→</a>
     </div>
 
     <div class="departure-card">
         <div>
-            <div class="line">⭐ Favoritter</div>
-            <div class="destination">Dine lagrede stopp</div>
+            <div class="line">🎯 Funksjoner</div>
+            <div class="destination">Søk, kart og favoritter</div>
         </div>
-        <a href="/favoritt" class="time">→</a>
+    </div>
 
-        
+    <a href="/" class="back">← Tilbake til forsiden</a>
 
 </div>
 

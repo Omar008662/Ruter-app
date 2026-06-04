@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kollektiv App</title>
+    <title>Favorittstopp</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<!-- Navbar -->
 <div class="navbar">
     <div class="nav-container">
-        <div class="logo">Ruter#</div>
+        <div class="logo">Ruter#
+        </div>
 
         <ul class="nav-links">
             <li><a href="/">Hjem</a></li>
@@ -19,43 +19,49 @@
             <li><a href="/kart">Kart</a></li>
             <li><a href="/omoss">Om oss</a></li>
             <li><a href="/favoritt">Favoritter</a></li>
+            
         </ul>
     </div>
 </div>
 
-<!-- Main container -->
 <div class="container">
 
-    <h1>Velkommen</h1>
-
-    <p style="text-align:center; color:#666; margin-bottom:20px;">
-        Finn avganger og planlegg reisen raskt
-    </p>
+    <h1>⭐ Favorittstopp</h1>
 
     <div class="departure-card">
         <div>
-            <div class="line">🔎 Søk avganger</div>
-            <div class="destination">Finn buss, trikk og T-bane</div>
+            <div class="line">Jernbanetorget</div>
+            <div class="destination">Oslo sentrum</div>
         </div>
-        <a href="/søk" class="time">→</a>
+        <div class="time">❤</div>
     </div>
 
     <div class="departure-card">
         <div>
-            <div class="line">🗺️ Åpne kart</div>
-            <div class="destination">Se holdeplasser i nærheten</div>
+            <div class="line">Nationaltheatret</div>
+            <div class="destination">Tog, T-bane og trikk</div>
         </div>
-        <a href="/kart" class="time">→</a>
+        <div class="time">❤</div>
     </div>
 
     <div class="departure-card">
         <div>
-            <div class="line">⭐ Favoritter</div>
-            <div class="destination">Dine lagrede stopp</div>
+            <div class="line">Majorstuen</div>
+            <div class="destination">T-baneknutepunkt</div>
         </div>
-        <a href="/favoritt" class="time">→</a>
+        <div class="time">❤</div>
+    </div>
 
-        
+    <div class="departure-card">
+        <div>
+            <div class="line">Blindern</div>
+            <div class="destination">Universitetsområdet</div>
+        </div>
+        <div class="time">❤</div>
+    </div>
+
+    <a href="/" class="back">← Tilbake til forsiden</a>
+    
 
 </div>
 

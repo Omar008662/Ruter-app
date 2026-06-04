@@ -1,24 +1,79 @@
-<link rel="stylesheet" href="/static/style.css">
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avganger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/">
+            <div class="logo">Ruter+</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Hjem</a></li>
+                <li><a href="/">Søk</a></li>
+                <li><a href="Kart.html">Kart</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div class="container">
+    <main class="page">
+        <section class="container">
+            <h1>{{ stop }}</h1>
 
-<h1>{{ stop }}</h1>
+            {% if error %}
+                <p class="error-message">{{ error }}</p>
+            {% else %}
+                <div id="departures"></div>
+            {% endif %}
 
-{% for bus in departures %}
+            <a class="back" href="/">← Nytt søk</a>
+        </section>
+    </main>
 
-<div class="departure-card">
-    <div>
-        <div class="line">{{ bus.line }}</div>
-        <div class="destination">{{ bus.destination }}</div>
-    </div>
+    {% if not error %}
+    <script>
+        const stopId = {{ stop_id|tojson }};
 
-    <div class="time">
-        {{ bus.time }}
-    </div>
-</div>
+        function loadDepartures() {
+            fetch("/departures/" + encodeURIComponent(stopId))
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById("departures");
+                    container.innerHTML = "";
 
-{% endfor %}
+                    if (!data.length) {
+                        container.innerHTML = "<p>Ingen avganger funnet.</p>";
+                        return;
+                    }
 
-<a class="back" href="/">← Nytt søk</a>
+                    data.forEach(bus => {
+                        const div = document.createElement("div");
+                        div.className = "departure-card";
 
-</div>  
+                        div.innerHTML = `
+                            <div>
+                                <div class="line">${bus.line}</div>
+                                <div class="destination">${bus.destination}</div>
+                            </div>
+                            <div class="time">${bus.time}</div>
+                        `;
+
+                        container.appendChild(div);
+                    });
+                })
+                .catch(() => {
+                    document.getElementById("departures").innerHTML =
+                        "<p>Kunne ikke oppdatere avganger.</p>";
+                });
+        }
+
+        loadDepartures();
+        setInterval(loadDepartures, 30000);
+    </script>
+    {% endif %}
+</body>
+</html>

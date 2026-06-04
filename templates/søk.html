@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruter+</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">Ruter#</div>
+                <ul class="nav-links">
+                    <li><a href="/">Hjem</a></li>
+                    <li><a href="/søk">Søk</a></li>
+                    <li><a href="/kart">Kart</a></li>
+                    <li><a href="/omoss">Om oss</a></li>
+                    <li><a href="/favoritt">Favoritter</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="container">
+            <h1>Finn neste avgang</h1>
+
+            <form action="/search" method="post" class="search-box">
+                <input type="text" name="stop" placeholder="Søk etter stopp i Oslo" required>
+                <button type="submit">Søk</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
